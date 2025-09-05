@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Free temporary email generator. Create disposable email addresses instantly to protect your privacy and avoid spam.">
+    <meta name="keywords" content="temp mail, temporary email, disposable email, fake email, email generator">
+    <title>TempMail Generator - Free Disposable Email Addresses</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <div class="container main-container">
+        <div class="hero-section text-center py-5">
+            <h1 class="display-4 fw-bold">Secure Temporary Email</h1>
+            <p class="lead">Protect your personal inbox from spam with our disposable email service</p>
+            <div class="d-flex justify-content-center flex-wrap gap-2 mt-3">
+                <span class="badge bg-light text-dark p-2"><i class="fas fa-shield-alt me-1"></i> Secure</span>
+                <span class="badge bg-light text-dark p-2"><i class="fas fa-bolt me-1"></i> Instant</span>
+                <span class="badge bg-light text-dark p-2"><i class="fas fa-user-secret me-1"></i> Anonymous</span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="card email-box mb-4">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Your Temporary Email</h3>
+                        <div class="d-flex align-items-center justify-content-between flex-wrap">
+                            <div class="email-display flex-grow-1 me-2 mb-2" id="current-email">loading...</div>
+                            <button class="btn btn-primary mb-2" id="generate-email"><i class="fas fa-sync-alt me-1"></i> Generate New</button>
+                        </div>
+                        <p class="text-muted">Use this email for sign-ups and verifications. Emails will appear below automatically.</p>
+                        
+                        <div class="domain-selector mt-4">
+                            <h4>Select Domain</h4>
+                            <div class="d-flex flex-wrap gap-2 mt-2">
+                                <button class="btn btn-outline-primary btn-sm domain-option active" data-domain="@tempmail.org">@tempmail.org</button>
+                                <button class="btn btn-outline-primary btn-sm domain-option" data-domain="@disposable.com">@disposable.com</button>
+                                <button class="btn btn-outline-primary btn-sm domain-option" data-domain="@throwaway.me">@throwaway.me</button>
+                                <button class="btn btn-outline-primary btn-sm domain-option" data-domain="@quickmail.net">@quickmail.net</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card inbox-box">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="card-title mb-0">Inbox</h4>
+                            <button class="btn btn-outline-secondary btn-sm" id="refresh-inbox"><i class="fas fa-redo me-1"></i> Refresh</button>
+                        </div>
+                        <div class="message-list" id="inbox-container">
+                            <div class="alert alert-info">Your inbox is empty. Emails will appear here when received.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="features-section mt-5">
+                    <h3 class="text-center mb-4">Why Use Our Temp Mail Service?</h3>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="card feature-card h-100">
+                                <div class="card-body text-center p-4">
+                                    <div class="feature-icon mb-3">
+                                        <i class="fas fa-user-shield"></i>
+                                    </div>
+                                    <h5>Privacy Protection</h5>
+                                    <p class="text-muted">Keep your personal email private and avoid spam.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card feature-card h-100">
+                                <div class="card-body text-center p-4">
+                                    <div class="feature-icon mb-3">
+                                        <i class="fas fa-bolt"></i>
+                                    </div>
+                                    <h5>Instant Setup</h5>
+                                    <p class="text-muted">No registration needed. Get a temporary email instantly.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="card feature-card h-100">
+                                <div class="card-body text-center p-4">
+                                    <div class="feature-icon mb-3">
+                                        <i class="fas fa-shield-alt"></i>
+                                    </div>
+                                    <h5>Secure</h5>
+                                    <p class="text-muted">Emails are automatically deleted after 24 hours.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h5 class="card-title">Search Tools</h5>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search tools..." id="search-input">
+                            <button class="btn btn-primary" type="button" id="search-button"><i class="fas fa-search"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ad-container mb-4">
+                    <div class="ad-label">Advertisement</div>
+                    <div class="ad-content">
+                        <p>Premium Temp Mail Service</p>
+                        <div class="ad-placeholder">
+                            <p>Ad Space (300x250)</p>
+                            <small>Google AdSense</small>
+                        </div>
+                        <p class="mt-2 small">Upgrade for ad-free experience and more features!</p>
+                    </div>
+                </div>
+                
+                <div class="ad-container">
+                    <div class="ad-label">Sponsored</div>
+                    <div class="ad-content">
+                        <p>Try Our Other Privacy Tools</p>
+                        <div class="ad-placeholder">
+                            <p>Ad Space (300x600)</p>
+                            <small>Google AdSense</small>
+                        </div>
+                        <p class="mt-2 small">VPN, Password Manager, and more privacy tools</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script src="ads.js"></script>
+</body>
+</html>

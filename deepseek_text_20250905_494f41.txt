@@ -1,0 +1,20 @@
+TempMail Generator - Setup Instructions
+
+1. Extract all files to your web server directory
+2. Update the ads.js file with your actual AdSense code
+3. Customize the style.css file to match your branding
+4. Upload all files to your web server
+
+To add Google AdSense:
+- Replace the placeholder ad code in ads.js with your actual AdSense code
+- Update the ad containers in index.html with your ad unit IDs
+
+Features:
+- Responsive design works on mobile and desktop
+- Email generation with multiple domain options
+- Copy to clipboard functionality
+- Simulated inbox with message display
+- Ad-ready containers for monetization
+- Dynamic header and footer inclusion
+
+For support, please refer to the AdSense documentation for proper ad implementation.
